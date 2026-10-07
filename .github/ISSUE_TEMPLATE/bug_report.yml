@@ -1,0 +1,102 @@
+name: Bug Report
+description: Report a bug found in Viscera N' Vitals
+title: "[BUG] "
+labels:
+  - bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping test Viscera N' Vitals!
+
+        Before submitting, please search the existing issues to make sure this bug has not already been reported.
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: Viscera N' Vitals Version
+      description: What version of the mod are you using?
+      placeholder: "Example: 0.1.1a"
+    validations:
+      required: true
+
+  - type: input
+    id: game-version
+    attributes:
+      label: Game Version
+      description: What version of the base game are you using?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Bug Category
+      options:
+        - Crash
+        - Gameplay
+        - UI / Menu
+        - Visual / Animation
+        - Audio
+        - Performance
+        - Compatibility
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How serious is the bug?
+      options:
+        - Minor - cosmetic or barely noticeable
+        - Moderate - affects gameplay but is still playable
+        - Major - significantly affects gameplay
+        - Critical - crash, save issue, or game-breaking
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug in as much detail as you can.
+      placeholder: Tell me exactly what went wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Tell me how to make the bug happen again.
+      placeholder: |
+        1. Launch the game
+        2. Go to...
+        3. Do...
+        4. The bug occurs
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: Describe what should have happened instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshots, video, logs, or extra information
+      description: Drag screenshots/files into this box or paste any useful logs or links.
+
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Duplicate check
+      options:
+        - label: I searched the existing issues and could not find this bug already reported.
+          required: true
