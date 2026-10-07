@@ -21,13 +21,6 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: game-version
-    attributes:
-      label: Game Version
-      description: What version of the base game are you using?
-    validations:
-      required: true
 
   - type: dropdown
     id: category
